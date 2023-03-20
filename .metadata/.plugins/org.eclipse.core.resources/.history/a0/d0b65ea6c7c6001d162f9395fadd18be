@@ -1,0 +1,13 @@
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+
+public class Edad {
+
+	DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+	LocalDate fechaNac = LocalDate.parse("15/08/1993", fmt);
+	LocalDate ahora = LocalDate.now();
+
+	Period periodo = Period.between(fechaNac, ahora);
+	
+}
